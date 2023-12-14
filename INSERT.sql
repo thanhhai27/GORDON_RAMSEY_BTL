@@ -78,13 +78,13 @@ VALUES
 
 INSERT INTO NHANVIEN
 VALUES
-('NV01','Nguyen Thanh Hai','Nam','2003-07-02','To dan pho Hoa Tien, Phuong Cam Nghia, TP Cam Ranh, Tinh Khanh Hoa','2020-12-12','MB:32758740','Bang Dai Hoc',10000000,NULL,NULL),
-('NV02','Phan Thanh Binh','Nam','2003-10-13','62 Vo Van Tan, Phuong 6, Quan 3, TP Ho Chi Minh','2020-12-25','VCB:028374072','Chung chi IELTS 7.0',NULL,30000,'NV01'),
-('NV03','Quach Trung Hao','Nam','2002-11-12','27 Tran Quoc Thao, Phuong 6, Quan 3, TP Ho Chi Minh','2020-12-25','TCB:02837013','Bang Dai Hoc',NULL,29000,'NV01'),
-('NV04','Le Quang Phuc','Nam','2001-01-01','7 Nguyen Chi Thanh, TP Da Lat, Tinh Lam Dong','2020-12-25','MB:02834031','Bang Dai Hoc',8000000,NULL,'NV01'),
-('NV05','Nguyen Thanh Tuan','Nam','2004-10-10','121 Xo Viet Nghe Tinh, Phuong 17, Quan Binh Thanh, TP Ho Chi Minh','2020-12-25','ACB:028740113','Bang TOEIC 650',9500000,NULL,'NV01'),
-('NV06','Nguyen Thi Dao','Nu','2005-11-11','64 Nguyen Thoi Trung, Phuong 6, Quan 5, TP Ho Chi Minh','2020-12-25','VCB:01387049',NULL,NULL,27000,'NV01'),
-('NV07','Cao Hoang Cam Tu','Nu','2003-04-21','To dan pho Hoa Binh, Phuong Cam Phuc Bac, TP Cam Ranh, Tinh Khanh Hoa','2020-12-25','MB:013801029','Bang Ke Toan',10000000,NULL,'NV01')
+('DB01','Nguyen Thanh Hai','Nam','2003-07-02','To dan pho Hoa Tien, Phuong Cam Nghia, TP Cam Ranh, Tinh Khanh Hoa','2020-12-12','MB:32758740','Bang Dai Hoc',10000000,NULL,NULL),
+('DB02','Phan Thanh Binh','Nam','2003-10-13','62 Vo Van Tan, Phuong 6, Quan 3, TP Ho Chi Minh','2020-12-25','VCB:028374072','Chung chi IELTS 7.0',NULL,30000,'DB01'),
+('PV01','Quach Trung Hao','Nam','2002-11-12','27 Tran Quoc Thao, Phuong 6, Quan 3, TP Ho Chi Minh','2020-12-25','TCB:02837013','Bang Dai Hoc',NULL,29000,'DB01'),
+('PV02','Le Quang Phuc','Nam','2001-01-01','7 Nguyen Chi Thanh, TP Da Lat, Tinh Lam Dong','2020-12-25','MB:02834031','Bang Dai Hoc',8000000,NULL,'DB01'),
+('PV03','Nguyen Thanh Tuan','Nam','2004-10-10','121 Xo Viet Nghe Tinh, Phuong 17, Quan Binh Thanh, TP Ho Chi Minh','2020-12-25','ACB:028740113','Bang TOEIC 650',9500000,NULL,'DB01'),
+('PV04','Nguyen Thi Dao','Nu','2005-11-11','64 Nguyen Thoi Trung, Phuong 6, Quan 5, TP Ho Chi Minh','2020-12-25','VCB:01387049',NULL,NULL,27000,'DB01'),
+('TN01','Cao Hoang Cam Tu','Nu','2003-04-21','To dan pho Hoa Binh, Phuong Cam Phuc Bac, TP Cam Ranh, Tinh Khanh Hoa','2020-12-25','MB:013801029','Bang Ke Toan',10000000,NULL,'DB01')
 
 
 INSERT INTO PHONG
@@ -129,29 +129,29 @@ VALUES
 
 INSERT INTO PHUCVU
 VALUES
-('NV03'),
-('NV04'),
-('NV05'),
-('NV06')
+('PV01'),
+('PV02'),
+('PV03'),
+('PV04')
 
 INSERT INTO DAUBEP
 VALUES
-('NV01'),
-('NV02')
+('DB01'),
+('DB02')
 
 INSERT INTO THUNGAN
 VALUES 
-('NV07')
+('TN01')
 
 INSERT INTO THONGTINLIENHE
 VALUES
-('NV01','nthai123@gmail.com','0918293820'),
-('NV02','binhph0909@gmail.com','0928938293'),
-('NV03','qtrhao1412@gmail.com','0113839238'),
-('NV04','phucle001@gmail.com','0192837291'),
-('NV05','nttuan1212@gmail.com','0912839283'),
-('NV06','daothi1@gmail.com','0567989283'),
-('NV07','chctu2104@gmail.com','0193198498')
+('DB01','nthai123@gmail.com','0918293820'),
+('DB02','binhph0909@gmail.com','0928938293'),
+('PV01','qtrhao1412@gmail.com','0113839238'),
+('PV02','phucle001@gmail.com','0192837291'),
+('PV03','nttuan1212@gmail.com','0912839283'),
+('PV04','daothi1@gmail.com','0567989283'),
+('TN01','chctu2104@gmail.com','0193198498')
 
 INSERT INTO MON_AN
 VALUES
@@ -186,17 +186,17 @@ VALUES
 
 INSERT INTO DONHANG_PHUCVU
 VALUES
-('DH01','NV03'),
+('DH01','PV01'),
 ('DH02',NULL),
 ('DH03',NULL),
 ('DH04',NULL),
-('DH05','NV04'),
+('DH05','PV02'),
 ('DH06',NULL),
 ('DH07',NULL),
 ('DH08',NULL),
-('DH09','NV05'),
-('DH10','NV06'),
-('DH11','NV04'),
+('DH09','PV03'),
+('DH10','PV04'),
+('DH11','PV02'),
 ('DH12',NULL)
 
 INSERT INTO DONHANG_BAN
@@ -251,18 +251,18 @@ VALUES
 
 INSERT INTO HOADON_THUNGAN
 VALUES
-('HD01','NV07'),
-('HD02','NV07'),
-('HD03','NV07'),
-('HD04','NV07'),
-('HD05','NV07'),
-('HD06','NV07'),
-('HD07','NV07'),
-('HD08','NV07'),
-('HD09','NV07'),
-('HD10','NV07'),
-('HD11','NV07'),
-('HD12','NV07')
+('HD01','TN01'),
+('HD02','TN01'),
+('HD03','TN01'),
+('HD04','TN01'),
+('HD05','TN01'),
+('HD06','TN01'),
+('HD07','TN01'),
+('HD08','TN01'),
+('HD09','TN01'),
+('HD10','TN01'),
+('HD11','TN01'),
+('HD12','TN01')
 
 INSERT INTO HOADON_VOUCHER
 VALUES
@@ -281,21 +281,21 @@ VALUES
 
 INSERT INTO PHUCVU_PHONG
 VALUES
-('P1','NV03','2021-01-01'),
-('P1','NV04','2022-11-12'),
-('P2','NV05','2022-07-02'),
-('P2','NV06','2022-09-02'),
-('P3','NV04','2021-10-11')
+('P1','PV01','2021-01-01'),
+('P1','PV02','2022-11-12'),
+('P2','PV03','2022-07-02'),
+('P2','PV04','2022-09-02'),
+('P3','PV02','2021-10-11')
 
 INSERT INTO CHEBIEN_MON_AN
 VALUES
-('Sup Hai San',1,'NV01','Nguyen Thanh Hai'),
-('Gio Heo muoi chien',1,'NV02','Phan Thanh Binh'),
-('Loi vai bo my nuong',1,'NV02','Phan Thanh Binh'),
-('Xoi bo cau',1,'NV02','Phan Thanh Binh'),
-('Salad ca ngu',1,'NV01','Nguyen Thanh Hai'),
-('Khoai tay rocket',1,'NV01','Nguyen Thanh Hai'),
-('Ca hoi ap chao',1,'NV02','Phan Thanh Binh')
+('Sup Hai San',1,'DB01','Nguyen Thanh Hai'),
+('Gio Heo muoi chien',1,'DB02','Phan Thanh Binh'),
+('Loi vai bo my nuong',1,'DB02','Phan Thanh Binh'),
+('Xoi bo cau',1,'DB02','Phan Thanh Binh'),
+('Salad ca ngu',1,'DB01','Nguyen Thanh Hai'),
+('Khoai tay rocket',1,'DB01','Nguyen Thanh Hai'),
+('Ca hoi ap chao',1,'DB02','Phan Thanh Binh')
 
 INSERT INTO FD_VOUCHER_APDUNG
 VALUES
