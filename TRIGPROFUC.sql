@@ -238,6 +238,12 @@ BEGIN
        BEGIN
            DELETE FROM MON_AN
            WHERE @TEN = TEN
+           DELETE FROM DONHANG_FD
+           WHERE @TEN = TEN
+           DELETE FROM FD_VOUCHER_APDUNG
+           WHERE @TEN = TEN
+           DELETE FROM CHEBIEN_MON_AN
+           WHERE @TEN = TEN
        END
        ELSE
        BEGIN
