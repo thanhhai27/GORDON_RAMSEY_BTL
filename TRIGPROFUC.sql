@@ -446,3 +446,56 @@ BEGIN
 END
 GO
 
+--2.4.b
+CREATE FUNCTION func_revenue (@ngay INT, @thang INT, @nam INT)
+RETURNS VARCHAR(100)
+AS
+BEGIN
+    DECLARE @doanhthu BIGINT
+
+    IF (@ngay IS NOT NULL)
+    BEGIN
+        -- Kiem tra loi
+        IF (@thang IS NULL)
+        BEGIN
+            RETURN 'Ban chua nhap thang'
+        END
+        IF (@nam IS NULL)
+        BEGIN
+           RETURN 'Ban chua nhap nam'
+        END
+
+        -- Tinh doanh thu theo ngay
+        SELECT @doanhthu = SUM(TONGTIEN)
+        FROM HOADON
+        WHERE DAY(NGAYTAOHDON) = @ngay
+            AND MONTH(NGAYTAOHDON) = @thang
+            AND YEAR(NGAYTAOHDON) = @nam
+    END
+    ELSE
+    BEGIN
+        IF (@ngay IS NOT NULL)
+        BEGIN
+            -- Kiem tra loi
+            IF (@nam IS NULL)
+            BEGIN
+                RETURN 'Ban chua nhap nam'
+            END
+
+            -- Tinh doanh thu theo thang
+            SELECT @doanhthu = SUM(TONGTIEN)
+            FROM HOADON
+            WHERE MONTH(NGAYTAOHDON) = @thang
+                AND YEAR(NGAYTAOHDON) = @nam
+        END
+        ELSE
+        BEGIN
+            -- Tinh doanh thu theo nam
+            SELECT @doanhthu = SUM(TONGTIEN)
+            FROM HOADON
+            WHERE YEAR(NGAYTAOHDON) = @nam
+        END
+    END
+
+    RETURN CAST(@doanhthu AS VARCHAR(100))
+END
