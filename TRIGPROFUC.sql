@@ -236,8 +236,6 @@ BEGIN
        FROM DO_UONG
        WHERE @TEN = TEN))
        BEGIN
-           DELETE FROM FD_VOUCHER_APDUNG
-           WHERE @TEN = TEN
            DELETE FROM MON_AN
            WHERE @TEN = TEN
            DELETE FROM DONHANG_FD
